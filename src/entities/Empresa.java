@@ -1,9 +1,13 @@
 package entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Empresa {
     int id;
     String nome, email, setor;
     boolean compromissoInclusao;
+    private List<Vaga> vagas;
 
     public Empresa(int id, String nome, String email, String setor, boolean compromissoInclusao) {
         this.id = id;
@@ -11,6 +15,7 @@ public class Empresa {
         this.email = email;
         this.setor = setor;
         this.compromissoInclusao = compromissoInclusao;
+        this.vagas = new ArrayList<>();
     }
 
     public int getId() {
