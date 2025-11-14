@@ -11,4 +11,8 @@ public class Repositorio {
         empresas = new ArrayList<>();
         vagas = new ArrayList<>();
     }
+
+    public void adicionarEmpresa(Empresa empresa) {
+        empresas.add(empresa);
+    }
 }
