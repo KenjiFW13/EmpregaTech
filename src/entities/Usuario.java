@@ -3,8 +3,20 @@ package entities;
 public class Usuario {
     private int id;
     private String nome, email, areaDeInteresse, nivelExperiencia, idiomaPrincipal, CEP;
-    private Boolean PCD;
+    private boolean PCD;
 
+
+    public Usuario(int id, String nome, String email, String areaDeInteresse, String nivelExperiencia,
+                   String idiomaPrincipal, String CEP, boolean pcd) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.areaDeInteresse = areaDeInteresse;
+        this.nivelExperiencia = nivelExperiencia;
+        this.idiomaPrincipal = idiomaPrincipal;
+        this.CEP = CEP;
+        this.PCD = pcd;
+    }
     public int getId() {
         return id;
     }
@@ -53,11 +65,11 @@ public class Usuario {
         this.idiomaPrincipal = idiomaPrincipal;
     }
 
-    public Boolean getPCD() {
+    public boolean getPCD() {
         return PCD;
     }
 
-    public void setPCD(Boolean PCD) {
+    public void setPCD(boolean PCD) {
         this.PCD = PCD;
     }
 
