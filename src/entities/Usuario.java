@@ -66,7 +66,7 @@ public class Usuario {
         return "Usuario{" +
                 "ID=" + id +
                 ", Nome='" + nome + '\'' +
-                ", Email='" + email + '\'' +
+                ", E-mail='" + email + '\'' +
                 ", Área de Interesse='" + areaDeInteresse + '\'' +
                 ", Nível de Experiência='" + nivelExperiencia + '\'' +
                 ", Idioma Principal='" + idiomaPrincipal + '\'' +
