@@ -15,4 +15,8 @@ public class Repositorio {
     public void adicionarEmpresa(Empresa empresa) {
         empresas.add(empresa);
     }
+
+    public void adicionarVaga(Vaga vaga){
+        vagas.add(vaga);
+    }
 }
