@@ -68,4 +68,8 @@ public class Empresa {
                 ", Compromisso com Inclusão=" + compromissoInclusao +
                 '}';
     }
+
+    public void adicionarVaga(Vaga vaga) {
+        vagas.add(vaga);
+    }
 }
