@@ -1,0 +1,14 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Repositorio {
+    List<Empresa> empresas;
+    List<Vaga> vagas;
+
+    public Repositorio(){
+        empresas = new ArrayList<>();
+        vagas = new ArrayList<>();
+    }
+}
