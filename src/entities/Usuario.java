@@ -2,7 +2,7 @@ package entities;
 
 public class Usuario {
     private int id;
-    private String nome, email, areaDeInteresse, nivelExperiencia, idiomaPrincipal;
+    private String nome, email, areaDeInteresse, nivelExperiencia, idiomaPrincipal, CEP;
     private Boolean PCD;
 
     public int getId() {
@@ -61,6 +61,14 @@ public class Usuario {
         this.PCD = PCD;
     }
 
+    public String getCEP() {
+        return CEP;
+    }
+
+    public void setCEP(String CEP) {
+        this.CEP = CEP;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -70,7 +78,8 @@ public class Usuario {
                 ", Área de Interesse='" + areaDeInteresse + '\'' +
                 ", Nível de Experiência='" + nivelExperiencia + '\'' +
                 ", Idioma Principal='" + idiomaPrincipal + '\'' +
-                ", PCD=" + PCD +
+                ", CEP='" + CEP + '\'' +
+                ", PCD=" + (PCD ? "Sim" : "Não") +
                 '}';
     }
 }
