@@ -12,4 +12,55 @@ public class Empresa {
         this.setor = setor;
         this.compromissoInclusao = compromissoInclusao;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSetor() {
+        return setor;
+    }
+
+    public void setSetor(String setor) {
+        this.setor = setor;
+    }
+
+    public boolean isCompromissoInclusao() {
+        return compromissoInclusao;
+    }
+
+    public void setCompromissoInclusao(boolean compromissoInclusao) {
+        this.compromissoInclusao = compromissoInclusao;
+    }
+
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "Id=" + id +
+                ", Nome='" + nome + '\'' +
+                ", Email='" + email + '\'' +
+                ", Setor='" + setor + '\'' +
+                ", Compromisso com Inclusão=" + compromissoInclusao +
+                '}';
+    }
 }
