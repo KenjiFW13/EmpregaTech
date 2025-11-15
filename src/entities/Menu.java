@@ -1,5 +1,7 @@
 package entities;
+import java.util.List;
 import java.util.Scanner;
+import entities.*;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
@@ -49,5 +51,50 @@ public class Menu {
         repositorio.adicionarEmpresa(empresa);
 
         System.out.println("Empresa adicionada com sucesso!");
+    }
+
+    public void cadastrarVaga(Vaga vaga) {
+        List<Empresa> listaEmpresas = repositorio.empresas;
+
+        if (listaEmpresas.isEmpty()){
+            System.out.println("Não há empresas para cadastrar a vaga!");
+            return;
+        }
+
+        System.out.println("=== Cadastrar Vaga ===");
+
+        System.out.println("Título da Vaga: ");
+        String titulo = scanner.next();
+
+        System.out.println("Área: ");
+        String area = scanner.next();
+
+        System.out.println("Tipo de contrato: ");
+        String tipo = scanner.next();
+
+        System.out.println("Nível desejado para essa vaga: ");
+        String nivel = scanner.next();
+
+        System.out.println("Vaga Inclusiva: \n" +
+                "1 - Sim\n" +
+                "2 - Não\n");
+
+        System.out.println("Escolha a empresa para ter a vaga cadastrada: ");
+            for (int i = 0; i < listaEmpresas.size(); i++) {
+                Empresa empresa = listaEmpresas.get(i);
+                System.out.println((i + 1) + " - " + empresa.getNome());
+            }
+
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            if (opcao < 1 || opcao > listaEmpresas.size()) {
+                System.out.println("Opção inválida!");
+                return;
+            }
+
+            Empresa empresaSelecionada = listaEmpresas.get(opcao - 1);
+
+            System.out.println("Empresa selecionada: " +  empresaSelecionada.getNome());
     }
 }
