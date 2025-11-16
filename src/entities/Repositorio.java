@@ -31,7 +31,7 @@ public class Repositorio {
             System.out.println(empresa.toString());
         }
     }
-    // Método de listar empresas, puxa da classe Menu
+    // Método de listar empresas
 
     public void listarVagas(){
         if (vagas.isEmpty()){
@@ -42,5 +42,5 @@ public class Repositorio {
             System.out.println(vaga.toString());
         }
     }
-    // Método de listar vagas, puxa da classe Menu
+    // Método de listar vagas
 }

@@ -128,4 +128,11 @@ public class Menu {
         System.out.println("Vaga adicionada com sucesso!");
     }
     // Método de cadastrar vagas ao sistema e às empresas
+
+    public void listarEmpresas(){
+        System.out.println("=== Lista de Empresas ===");
+        // Não é necessário fazer um verificador se há ou não empresas aqui, pois já existe um verificador na classe Repositorio
+        repositorio.listarEmpresas();
+        // Basta chamar o método listarEmpresas pelo Repositorio, pois já está feito
+    }
 }
