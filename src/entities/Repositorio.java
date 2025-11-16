@@ -15,10 +15,12 @@ public class Repositorio {
     public void adicionarEmpresa(Empresa empresa) {
         empresas.add(empresa);
     }
+    // Método de adicionar Empresas, puxado da classe Menu
 
     public void adicionarVaga(Vaga vaga){
         vagas.add(vaga);
     }
+    // Método de adicionar Vagas, puxado da classe Menu
 
     public void listarEmpresas(){
         if (empresas.isEmpty()){
@@ -29,6 +31,7 @@ public class Repositorio {
             System.out.println(empresa.toString());
         }
     }
+    // Método de listar empresas, puxa da classe Menu
 
     public void listarVagas(){
         if (vagas.isEmpty()){
@@ -39,4 +42,5 @@ public class Repositorio {
             System.out.println(vaga.toString());
         }
     }
+    // Método de listar vagas, puxa da classe Menu
 }

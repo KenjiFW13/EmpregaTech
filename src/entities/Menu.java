@@ -53,6 +53,7 @@ public class Menu {
 
         System.out.println("Empresa adicionada com sucesso!");
     }
+    // Método de cadastrar Empresas ao sistema, recebe como parâmetro a classe empresa
 
     public void cadastrarVaga() {
         List<Empresa> listaEmpresas = repositorio.empresas;
@@ -126,4 +127,5 @@ public class Menu {
 
         System.out.println("Vaga adicionada com sucesso!");
     }
+    // Método de cadastrar vagas ao sistema e às empresas
 }
