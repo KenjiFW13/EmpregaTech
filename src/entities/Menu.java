@@ -135,4 +135,9 @@ public class Menu {
         repositorio.listarEmpresas();
         // Basta chamar o método listarEmpresas pelo Repositorio, pois já está feito
     }
+
+    public void listarVagas(){
+        System.out.println("=== Lista de Vagas ===");
+        repositorio.listarVagas();
+    }
 }
