@@ -1,7 +1,6 @@
 package entities;
 import java.util.List;
 import java.util.Scanner;
-import entities.*;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
@@ -78,6 +77,8 @@ public class Menu {
         System.out.println("Vaga Inclusiva: \n" +
                 "1 - Sim\n" +
                 "2 - Não\n");
+        int opcaoInclusao = scanner.nextInt();
+        boolean vagaInclusiva = (opcaoInclusao == 1);
 
         System.out.println("Escolha a empresa para ter a vaga cadastrada: ");
             for (int i = 0; i < listaEmpresas.size(); i++) {
