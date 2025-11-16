@@ -97,5 +97,9 @@ public class Menu {
             Empresa empresaSelecionada = listaEmpresas.get(opcao - 1);
 
             System.out.println("Empresa selecionada: " +  empresaSelecionada.getNome());
+
+            int IDVaga = repositorio.vagas.size() + 1;
+            // Gerador de Ids automático para vagas
+
     }
 }
