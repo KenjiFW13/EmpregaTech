@@ -26,8 +26,8 @@ public class Menu {
                 case 0 -> {return;}
                 case 1 -> cadastrarEmpresa();
                 case 2 -> cadastrarVaga();
-                case 3 -> listarVagas();
-                case 4 -> listarEmpresas();
+                case 3 -> listarEmpresas();
+                case 4 -> listarVagas();
 
                 default -> System.out.println("Insira uma opção válida!");
             }
