@@ -6,6 +6,8 @@ void main() {
     // Repositorio será usado como uma "memória do sistema"
 
     Menu menu = new Menu(repositorio);
+    // Menu diretamente ligado ao repositorio
 
     menu.exibirMenu();
+    // Exbição do menu
     }
