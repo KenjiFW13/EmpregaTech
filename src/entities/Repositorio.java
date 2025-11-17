@@ -43,4 +43,14 @@ public class Repositorio {
         }
     }
     // Método de listar vagas
+
+    public int getTotalEmpresas(){
+        return empresas.size();
+    }
+    // Esse método retorna o tamanho da lista empresas, útil para conseguir acessar a lista em outras classes que não estão no mesmo pacote que esta classe
+
+    public int getTotalVagas(){
+        return vagas.size();
+    }
+    // Mesma coisa que o método de cima, mas com a lista vagas
 }

@@ -1,14 +1,22 @@
 package entities;
 import java.util.List;
 import java.util.Scanner;
+import service.*;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
     private Repositorio repositorio;
+    private cadastroService CadastroService;
+    private listaService ListaService;
 
-    public Menu(Repositorio repositorio) {
+    public Menu(cadastroService cadastroService, listaService listaService, Scanner scanner, Repositorio repositorio) {
+        this.CadastroService = cadastroService;
+        this.ListaService = listaService;
+        this.scanner = scanner;
         this.repositorio = repositorio;
     }
+
+
 
     public void exibirMenu(){
 
@@ -24,7 +32,7 @@ public class Menu {
             int opcao = scanner.nextInt();
             switch (opcao) {
                 case 0 -> {return;}
-                case 1 -> cadastrarEmpresa();
+                case 1 -> cadastroService.cadastrarEmpresa();
                 case 2 -> cadastrarVaga();
                 case 3 -> listarEmpresas();
                 case 4 -> listarVagas();
@@ -34,43 +42,6 @@ public class Menu {
         }
     }
     // Menu de funções do sistema com escolhas por opções
-
-    public void cadastrarEmpresa() {
-        System.out.println("=== Cadastrar Empresa ===");
-
-        System.out.println("Nome do Empresa: ");
-        String nome = scanner.next();
-
-        System.out.println("E-mail da Empresa: ");
-        String email = scanner.next();
-
-        System.out.println("Setor da Empresa: ");
-        String setor = scanner.next();
-
-        System.out.println("A empresa possui políticas ativas de inclusão e diversidade?\n" +
-                "1 - Sim\n" +
-                "2 - Não\n");
-        int opcao = scanner.nextInt();
-        boolean compromissoInclusao = (opcao == 1);
-
-        int idEmpresa = repositorio.empresas.size() + 1;
-        // Gerador de IDs para empresas
-
-        Empresa empresa = new Empresa(
-                idEmpresa,
-                nome,
-                email,
-                setor,
-                compromissoInclusao
-        );
-        // Objeto empresa
-
-        repositorio.adicionarEmpresa(empresa);
-        // Adiciona empresa ao repositório
-
-        System.out.println("Empresa adicionada com sucesso!");
-    }
-    // Método de cadastrar Empresas ao sistema, recebe como parâmetro a classe empresa
 
     public void cadastrarVaga() {
         List<Empresa> listaEmpresas = repositorio.empresas;
