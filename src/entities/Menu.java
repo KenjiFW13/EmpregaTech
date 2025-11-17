@@ -23,14 +23,19 @@ public class Menu {
                     =========================""");
             int opcao = scanner.nextInt();
             switch (opcao) {
-                case 0: return;
-                default: System.out.println("Insira uma opção válida!");
+                case 0 -> {return;}
+                case 1 -> cadastrarEmpresa();
+                case 2 -> cadastrarVaga();
+                case 3 -> listarVagas();
+                case 4 -> listarEmpresas();
+
+                default -> System.out.println("Insira uma opção válida!");
             }
         }
     }
     // Menu de funções do sistema com escolhas por opções
 
-    public void cadastrarEmpresa(Empresa empresa) {
+    public void cadastrarEmpresa() {
         System.out.println("=== Cadastrar Empresa ===");
 
         System.out.println("Nome do Empresa: ");
@@ -47,6 +52,18 @@ public class Menu {
                 "2 - Não\n");
         int opcao = scanner.nextInt();
         boolean compromissoInclusao = (opcao == 1);
+
+        int idEmpresa = repositorio.empresas.size() + 1;
+        // Gerador de IDs para empresas
+
+        Empresa empresa = new Empresa(
+                idEmpresa,
+                nome,
+                email,
+                setor,
+                compromissoInclusao
+        );
+        // Objeto empresa
 
         repositorio.adicionarEmpresa(empresa);
         // Adiciona empresa ao repositório
