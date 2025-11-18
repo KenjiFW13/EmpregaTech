@@ -34,7 +34,7 @@ public class Menu {
                 case 0 -> {return;}
                 case 1 -> cadastroService.cadastrarEmpresa();
                 case 2 -> cadastroService.cadastrarVaga();
-                case 3 -> listarEmpresas();
+                case 3 -> listaService.listarEmpresas();
                 case 4 -> listarVagas();
 
                 default -> System.out.println("Insira uma opção válida!");
@@ -42,13 +42,6 @@ public class Menu {
         }
     }
     // Menu de funções do sistema com escolhas por opções
-
-    public void listarEmpresas(){
-        System.out.println("=== Lista de Empresas ===");
-        // Não é necessário fazer um verificador se há ou não empresas aqui, pois já existe um verificador na classe Repositorio
-        repositorio.listarEmpresas();
-        // Basta chamar o método listarEmpresas pelo Repositorio, pois já está feito
-    }
 
     public void listarVagas(){
         System.out.println("=== Lista de Vagas ===");
