@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Repositorio {
-    List<Empresa> empresas;
-    List<Vaga> vagas;
+    public List<Empresa> empresas;
+    public List<Vaga> vagas;
 
     public Repositorio(){
         empresas = new ArrayList<>();
