@@ -6,10 +6,12 @@ import java.util.List;
 public class Repositorio {
     public List<Empresa> empresas;
     public List<Vaga> vagas;
+    public List<Usuario> usuarios;
 
     public Repositorio(){
         empresas = new ArrayList<>();
         vagas = new ArrayList<>();
+        usuarios = new ArrayList<>();
     }
 
     public void adicionarEmpresa(Empresa empresa) {
@@ -53,4 +55,14 @@ public class Repositorio {
         return vagas.size();
     }
     // Mesma coisa que o método de cima, mas com a lista vagas
+
+    public void adicionarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
+    // Método para adicionar um usuário à lista
+
+    public List<Usuario> getUsuarios(){
+        return usuarios;
+    }
+    // Método para retornar a lista de usuários
 }

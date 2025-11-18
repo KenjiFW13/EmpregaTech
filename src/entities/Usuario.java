@@ -3,7 +3,7 @@ package entities;
 public class Usuario {
     private int id;
     private String nome, email, areaDeInteresse, nivelExperiencia, idiomaPrincipal, CEP;
-    private boolean PCD;
+    private boolean buscaInclusao;
 
 
     public Usuario(int id, String nome, String email, String areaDeInteresse, String nivelExperiencia,
@@ -15,7 +15,7 @@ public class Usuario {
         this.nivelExperiencia = nivelExperiencia;
         this.idiomaPrincipal = idiomaPrincipal;
         this.CEP = CEP;
-        this.PCD = pcd;
+        this.buscaInclusao = pcd;
     }
     public int getId() {
         return id;
@@ -65,12 +65,12 @@ public class Usuario {
         this.idiomaPrincipal = idiomaPrincipal;
     }
 
-    public boolean getPCD() {
-        return PCD;
+    public boolean getBuscaInclusao() {
+        return buscaInclusao;
     }
 
-    public void setPCD(boolean PCD) {
-        this.PCD = PCD;
+    public void setBuscaInclusao(boolean buscaInclusao) {
+        this.buscaInclusao = buscaInclusao;
     }
 
     public String getCEP() {
@@ -91,7 +91,7 @@ public class Usuario {
                 ", Nível de Experiência='" + nivelExperiencia + '\'' +
                 ", Idioma Principal='" + idiomaPrincipal + '\'' +
                 ", CEP='" + CEP + '\'' +
-                ", PCD=" + (PCD ? "Sim" : "Não") +
+                ", buscaInclusao=" + (buscaInclusao ? "Sim" : "Não") +
                 '}';
     }
 }
