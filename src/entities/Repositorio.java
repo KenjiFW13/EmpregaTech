@@ -65,4 +65,9 @@ public class Repositorio {
         return usuarios;
     }
     // Método para retornar a lista de usuários
+
+    public int getTotalUsuarios(){
+        return usuarios.size();
+    }
+    // Método para retornar tamanho da lista de Usuarios
 }

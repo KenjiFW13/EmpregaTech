@@ -126,5 +126,46 @@ public class cadastroService {
     }
     // Método de cadastrar vagas ao sistema e às empresas
 
+    public void cadastrarUsuario() {
+        List<Usuario> listaUsuario = repositorio.usuarios;
+        System.out.println("=== Cadastrar Usuário ===");
 
+        System.out.println("Nome do Usuário: ");
+        String nome = scanner.next();
+
+        System.out.println("E-mail do Usuário: ");
+        String email = scanner.next();
+
+        System.out.println("Área de interesse: ");
+        String areaDeInteresse = scanner.next();
+
+        System.out.println("Nível de Experiência: ");
+        String nivelExperiencia = scanner.next();
+
+        System.out.println("Idioma principal: ");
+        String idiomaPrincipal = scanner.next();
+
+        System.out.println("CEP: ");
+        String CEP = scanner.next();
+
+        System.out.println("Busca vaga de inclusão?: \n" +
+                "1- Sim\n" +
+                "2- Não\n");
+        int opcao = scanner.nextInt();
+        boolean buscaInclusao = (opcao == 1);
+
+        int IdUsuario = repositorio.getTotalUsuarios() + 1;
+        // Gerador de IDs para usuarios
+
+        Usuario usuario = new Usuario(
+                IdUsuario,
+                nome,
+                email,
+                areaDeInteresse,
+                nivelExperiencia,
+                idiomaPrincipal,
+                CEP,
+                buscaInclusao
+        );
+    }
 }

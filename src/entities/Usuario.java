@@ -7,7 +7,7 @@ public class Usuario {
 
 
     public Usuario(int id, String nome, String email, String areaDeInteresse, String nivelExperiencia,
-                   String idiomaPrincipal, String CEP, boolean pcd) {
+                   String idiomaPrincipal, String CEP, boolean buscaInclusao) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -15,7 +15,7 @@ public class Usuario {
         this.nivelExperiencia = nivelExperiencia;
         this.idiomaPrincipal = idiomaPrincipal;
         this.CEP = CEP;
-        this.buscaInclusao = pcd;
+        this.buscaInclusao = buscaInclusao;
     }
     public int getId() {
         return id;
