@@ -1,25 +1,15 @@
 package entities;
-import java.util.List;
 import java.util.Scanner;
 import service.*;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
-    private Repositorio repositorio;
-    private cadastroService CadastroService;
-    private listaService ListaService;
 
-    public Menu(cadastroService cadastroService, listaService listaService, Scanner scanner, Repositorio repositorio) {
-        this.CadastroService = cadastroService;
-        this.ListaService = listaService;
+    public Menu(Scanner scanner) {
         this.scanner = scanner;
-        this.repositorio = repositorio;
     }
 
-
-
     public void exibirMenu(){
-
         while (true) {
             System.out.println("""
                     === MENU EmpregaTech ===
@@ -36,7 +26,6 @@ public class Menu {
                 case 2 -> cadastroService.cadastrarVaga();
                 case 3 -> listaService.listarEmpresas();
                 case 4 -> listaService.listarVagas();
-
                 default -> System.out.println("Insira uma opção válida!");
             }
         }

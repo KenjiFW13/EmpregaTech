@@ -13,7 +13,7 @@ void main() {
     listaService ListaService = new listaService(repositorio, scanner);
     // Services
 
-    Menu menu = new Menu(CadastroService, ListaService, scanner, repositorio);
+    Menu menu = new Menu(scanner);
     // Menu diretamente ligado as services
 
     menu.exibirMenu();
