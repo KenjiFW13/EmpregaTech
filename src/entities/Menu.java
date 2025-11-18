@@ -17,6 +17,8 @@ public class Menu {
                     2 - Cadastrar Vaga
                     3 - Listar Empresas
                     4 - Listar Vagas
+                    5 - Cadastrar Usuário
+                    6 - Listar Usuários
                     0 - Sair
                     =========================""");
             int opcao = scanner.nextInt();
@@ -26,6 +28,8 @@ public class Menu {
                 case 2 -> cadastroService.cadastrarVaga();
                 case 3 -> listaService.listarEmpresas();
                 case 4 -> listaService.listarVagas();
+                case 5 -> cadastroService.cadastrarUsuario();
+                case 6 -> listaService.listarUsuarios();
                 default -> System.out.println("Insira uma opção válida!");
             }
         }

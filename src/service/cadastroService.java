@@ -126,7 +126,7 @@ public class cadastroService {
     }
     // Método de cadastrar vagas ao sistema e às empresas
 
-    public void cadastrarUsuario() {
+    public static void cadastrarUsuario() {
         List<Usuario> listaUsuario = repositorio.usuarios;
         System.out.println("=== Cadastrar Usuário ===");
 
@@ -167,5 +167,6 @@ public class cadastroService {
                 CEP,
                 buscaInclusao
         );
+        // Método para cadastrar  Usuários
     }
 }

@@ -21,4 +21,9 @@ public class listaService {
         System.out.println("=== Lista de Vagas ===");
         repositorio.listarVagas();
     }
+
+    public static void listarUsuarios(){
+        System.out.println("=== Lista de Usuarios ===");
+        repositorio.listarUsuarios();
+    }
 }

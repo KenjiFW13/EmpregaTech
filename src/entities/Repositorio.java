@@ -70,4 +70,15 @@ public class Repositorio {
         return usuarios.size();
     }
     // Método para retornar tamanho da lista de Usuarios
+
+    public void listarUsuarios(){
+        if (usuarios.isEmpty()){
+            System.out.println("Lista vazia!");
+            return;
+        }
+        for (Usuario usuario : usuarios) {
+            System.out.println(usuario.toString());
+        }
+    }
+    // Método para listar usuarios
 }
