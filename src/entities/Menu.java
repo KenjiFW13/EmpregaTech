@@ -35,16 +35,11 @@ public class Menu {
                 case 1 -> cadastroService.cadastrarEmpresa();
                 case 2 -> cadastroService.cadastrarVaga();
                 case 3 -> listaService.listarEmpresas();
-                case 4 -> listarVagas();
+                case 4 -> listaService.listarVagas();
 
                 default -> System.out.println("Insira uma opção válida!");
             }
         }
     }
     // Menu de funções do sistema com escolhas por opções
-
-    public void listarVagas(){
-        System.out.println("=== Lista de Vagas ===");
-        repositorio.listarVagas();
-    }
 }

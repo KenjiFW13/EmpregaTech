@@ -16,4 +16,9 @@ public class listaService {
         repositorio.listarEmpresas();
         // Basta chamar o método listarEmpresas pelo Repositorio, pois já está feito
     }
+
+    public static void listarVagas(){
+        System.out.println("=== Lista de Vagas ===");
+        repositorio.listarVagas();
+    }
 }
