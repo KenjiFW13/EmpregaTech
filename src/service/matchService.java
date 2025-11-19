@@ -42,7 +42,7 @@ public class matchService {
         System.out.println("Usuário selecionado: " +  usuarioSelecionado.getNome());
         // Selecionador de usuário para realizar match por número/opção
 
-        boolean vagaEncontrada = false;
+        boolean vagaEncontrada = true;
 
         List<Vaga> vagasCompativeis = new ArrayList<>();
 
@@ -66,7 +66,9 @@ public class matchService {
             }
 
             if (!motivos.isEmpty()){
+                System.out.println("Vaga encontrada!");
                 System.out.println("Vaga: " + vaga.getTitulo());
+                System.out.println("Empresa: " + vaga.getEmpresa());
                 System.out.println("Motivos de compatibilidade: ");
 
                 for (String motivo : motivos) {
@@ -75,10 +77,9 @@ public class matchService {
 
                 System.out.println("---------------------------");
             }
-        }
-
-        if (!vagaEncontrada) {
-            System.out.println("Nenhuma vaga compatível encontrada para esse usuário.");
+            else {
+                System.out.println("Nenhuma vaga compatível para esse usuário!");
+            }
         }
     }
 }

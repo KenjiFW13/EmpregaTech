@@ -91,7 +91,7 @@ public class Usuario {
                 ", Nível de Experiência='" + nivelExperiencia + '\'' +
                 ", Idioma Principal='" + idiomaPrincipal + '\'' +
                 ", CEP='" + CEP + '\'' +
-                ", buscaInclusao=" + (buscaInclusao ? "Sim" : "Não") +
+                ", Busca Inclusão=" + (buscaInclusao ? "Sim" : "Não") +
                 '}';
     }
 }
