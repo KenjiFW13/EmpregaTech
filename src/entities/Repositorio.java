@@ -46,6 +46,10 @@ public class Repositorio {
     }
     // Método de listar vagas
 
+    public List<Vaga> getVagas() {
+        return vagas;
+    }
+
     public int getTotalEmpresas(){
         return empresas.size();
     }

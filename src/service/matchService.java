@@ -1,6 +1,7 @@
 package service;
 import entities.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class matchService {
     }
 
     public static void buscarVagas(){
-        List<Usuario> listaUsuarios = repositorio.usuarios;
+        List<Usuario> listaUsuarios = repositorio.getUsuarios();
 
         if (listaUsuarios.isEmpty()){
             System.out.println("Não há usuários para realizar o match!");
@@ -40,5 +41,44 @@ public class matchService {
 
         System.out.println("Usuário selecionado: " +  usuarioSelecionado.getNome());
         // Selecionador de usuário para realizar match por número/opção
+
+        boolean vagaEncontrada = false;
+
+        List<Vaga> vagasCompativeis = new ArrayList<>();
+
+        for (Vaga vaga : repositorio.getVagas()){
+
+            List<String> motivos = new ArrayList<>();
+
+            if (usuarioSelecionado.getAreaDeInteresse().equalsIgnoreCase(vaga.getArea())){
+                motivos.add("Área compátivel (" +  vaga.getArea() + ")");
+            }
+
+            if (usuarioSelecionado.getNivelExperiencia().equalsIgnoreCase(vaga.getNivel())){
+                motivos.add("Nível compatível (" +  vaga.getNivel() + ")");
+            }
+
+            if (usuarioSelecionado.getBuscaInclusao()){
+                if (!vaga.isVagaInclusiva()){
+                    continue;
+                }
+                    motivos.add("Inclusiva");
+            }
+
+            if (!motivos.isEmpty()){
+                System.out.println("Vaga: " + vaga.getTitulo());
+                System.out.println("Motivos de compatibilidade: ");
+
+                for (String motivo : motivos) {
+                    System.out.println("- " + motivo);
+                }
+
+                System.out.println("---------------------------");
+            }
+        }
+
+        if (!vagaEncontrada) {
+            System.out.println("Nenhuma vaga compatível encontrada para esse usuário.");
+        }
     }
 }
