@@ -19,6 +19,7 @@ public class Menu {
                     4 - Listar Vagas
                     5 - Cadastrar Usuário 
                     6 - Listar Usuários
+                    7 - Match
                     0 - Sair
                     =========================""");
             int opcao = scanner.nextInt();
@@ -30,6 +31,7 @@ public class Menu {
                 case 4 -> listaService.listarVagas();
                 case 5 -> cadastroService.cadastrarUsuario();
                 case 6 -> listaService.listarUsuarios();
+                case 7 -> matchService.buscarVagas();
                 default -> System.out.println("Insira uma opção válida!");
             }
         }

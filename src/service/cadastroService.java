@@ -167,6 +167,11 @@ public class cadastroService {
                 CEP,
                 buscaInclusao
         );
-        // Método para cadastrar  Usuários
+        // Método para cadastrar Usuários
+
+        repositorio.adicionarUsuario(usuario);
+        // Adiciona usuário novo ao repositório
+
+        System.out.println("Usuário " +  usuario.getNome() + " cadastrado com sucesso!");
     }
 }

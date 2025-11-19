@@ -11,6 +11,7 @@ void main() {
 
     cadastroService CadastroService = new cadastroService(repositorio, scanner);
     listaService ListaService = new listaService(repositorio, scanner);
+    matchService MatchService = new matchService(repositorio, scanner);
     // Services
 
     Menu menu = new Menu(scanner);
