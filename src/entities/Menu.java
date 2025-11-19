@@ -14,10 +14,10 @@ public class Menu {
             System.out.println("""
                     === MENU EmpregaTech ===
                     1 - Cadastrar Empresa
-                    2 - Cadastrar Vaga
-                    3 - Listar Empresas
+                    2 - Listar Empresas
+                    3 - Cadastrar Vaga
                     4 - Listar Vagas
-                    5 - Cadastrar Usuário
+                    5 - Cadastrar Usuário 
                     6 - Listar Usuários
                     0 - Sair
                     =========================""");
@@ -25,8 +25,8 @@ public class Menu {
             switch (opcao) {
                 case 0 -> {return;}
                 case 1 -> cadastroService.cadastrarEmpresa();
-                case 2 -> cadastroService.cadastrarVaga();
-                case 3 -> listaService.listarEmpresas();
+                case 2 -> listaService.listarEmpresas();
+                case 3 -> cadastroService.cadastrarVaga();
                 case 4 -> listaService.listarVagas();
                 case 5 -> cadastroService.cadastrarUsuario();
                 case 6 -> listaService.listarUsuarios();
