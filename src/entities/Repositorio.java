@@ -33,7 +33,7 @@ public class Repositorio {
             System.out.println(empresa.toString());
         }
     }
-    // Método de listar empresas
+    // Método de listar empresas, se a lista estiver vazia, não retornará nada
 
     public void listarVagas(){
         if (vagas.isEmpty()){
@@ -44,11 +44,12 @@ public class Repositorio {
             System.out.println(vaga.toString());
         }
     }
-    // Método de listar vagas
+    // Método de listar vagas, se a lista estiver vazia, não retornará nada
 
     public List<Vaga> getVagas() {
         return vagas;
     }
+    // Método para pegar todas as vagas cadastradas no sistema
 
     public int getTotalEmpresas(){
         return empresas.size();

@@ -49,7 +49,8 @@ public class cadastroService {
 
         System.out.println("Empresa adicionada com sucesso!");
     }
-    // Método de cadastrar Empresas ao sistema, recebe como parâmetro a classe empresa
+    // Método de cadastrar Empresas ao sistema, coletando informações que o usuário informar ao sistema e depois
+    // armazena no repositorio
 
 
     public static void cadastrarVaga() {
@@ -87,6 +88,8 @@ public class cadastroService {
             Empresa empresa = listaEmpresas.get(i);
             System.out.println((i + 1) + " - " + empresa.getNome());
         }
+        // Simples estrutura de repetição para mostrar ao usuário todas as empresas cadastradas no
+        // sistema, e assim o usuário conseguir escolher por meio de opção
 
         int opcao = scanner.nextInt();
         scanner.nextLine();
@@ -124,7 +127,10 @@ public class cadastroService {
 
         System.out.println("Vaga adicionada com sucesso!");
     }
-    // Método de cadastrar vagas ao sistema e às empresas
+    // Método de cadastrar vagas ao sistema e às empresas, primeiro passa por um caso de erro se
+    // o sistema não houver nenhuma empresa cadastrada no repositorio, e depois realiza todo o método
+    // que coleta todas as informações que o usuário informa e cadastra a vaga em uma empresa do desejo
+    // do usuário e armazena no repositorio
 
     public static void cadastrarUsuario() {
         List<Usuario> listaUsuario = repositorio.usuarios;
@@ -167,11 +173,12 @@ public class cadastroService {
                 CEP,
                 buscaInclusao
         );
-        // Método para cadastrar Usuários
 
         repositorio.adicionarUsuario(usuario);
         // Adiciona usuário novo ao repositório
 
         System.out.println("Usuário " +  usuario.getNome() + " cadastrado com sucesso!");
     }
+    // Método para cadastrar Usuários, somente coleta todas as informações relevantes do usuário
+    // e armazena no repositorio
 }

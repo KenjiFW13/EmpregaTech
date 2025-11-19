@@ -36,5 +36,7 @@ public class Menu {
             }
         }
     }
-    // Menu de funções do sistema com escolhas por opções
+    // Menu de funções do sistema com escolhas por opções, de acordo com cada opção é chamado
+    // um método diferente de classes diferentes. Default é o caso de erro se o usuário inserir
+    // uma opção inválida
 }

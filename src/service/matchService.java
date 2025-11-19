@@ -15,12 +15,16 @@ public class matchService {
     }
 
     public static void buscarVagas(){
+        // Método para realizar o match de vagas com usuários, aqui é selecionado um usuário para realizar o match
+        // e em seguida o sistema percorre por todas as vagas cadastradas para recomendar ao usuário, considerando
+        // interesses em comum entre usuário e vaga/empresa.
         List<Usuario> listaUsuarios = repositorio.getUsuarios();
 
         if (listaUsuarios.isEmpty()){
             System.out.println("Não há usuários para realizar o match!");
             return;
         }
+        // Caso de erro se não houver usuários cadastrados no sistema
 
         System.out.println("=== Escolha um usuário para buscar vaga ===");
         for (int i = 0; i < listaUsuarios.size(); i++) {
@@ -81,5 +85,7 @@ public class matchService {
                 System.out.println("Nenhuma vaga compatível para esse usuário!");
             }
         }
+        // Estrutura de repetição que buscará a compatibilidade de vagas com o perfil do usuário, para cada vaga
+        // existente na memória do sistema ele repetirá a ação até achar uma vaga ideal para fazer o match
     }
 }
